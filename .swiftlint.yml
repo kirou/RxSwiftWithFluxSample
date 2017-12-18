@@ -1,0 +1,36 @@
+# 無効にするルール
+disabled_rules:
+- force_cast
+- trailing_whitespace
+- type_name
+- large_tuple
+- identifier_name
+- redundant_discardable_let
+- function_parameter_count
+
+# 一行の文字列制限を100文字から500文字に変更
+line_length: 500
+
+excluded: # Lint対象から外すファイルのあるパスを記述
+- Pods
+- Carthage
+
+# クラスの行数
+type_body_length:
+- 500 # warning
+- 600 # error
+
+# 変数名の最大文字数
+variable_name_max_length:
+- 60 # warning
+- 80 # error
+
+# 変数名の最小文字数
+variable_name_min_length:
+- 1 # warning
+- 0 # error
+
+# 関数の長さ
+function_body_length:
+- 100 # warning
+- 200 # error

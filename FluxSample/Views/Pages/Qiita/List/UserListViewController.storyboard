@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User List View Controller-->
+        <scene sceneID="Vp4-mZ-GBQ">
+            <objects>
+                <viewController storyboardIdentifier="UserListViewController" id="fRT-Qo-HRK" customClass="UserListViewController" customModule="FluxSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MTE-ay-65r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QhB-3O-Mqt" customClass="UserTableView" customModule="FluxSample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DXF-Tm-zbS">
+                                <rect key="frame" x="177" y="990" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DXF-Tm-zbS" firstAttribute="centerX" secondItem="MTE-ay-65r" secondAttribute="centerX" id="HWZ-hE-MJk"/>
+                            <constraint firstItem="QhB-3O-Mqt" firstAttribute="top" secondItem="MTE-ay-65r" secondAttribute="top" id="LtP-JP-Kk7"/>
+                            <constraint firstItem="QhB-3O-Mqt" firstAttribute="leading" secondItem="1PW-Ge-vRv" secondAttribute="leading" id="jsB-6t-wxt"/>
+                            <constraint firstItem="DXF-Tm-zbS" firstAttribute="centerY" secondItem="MTE-ay-65r" secondAttribute="centerY" id="lYB-f5-9Iq"/>
+                            <constraint firstAttribute="bottom" secondItem="QhB-3O-Mqt" secondAttribute="bottom" id="x28-hx-5el"/>
+                            <constraint firstItem="QhB-3O-Mqt" firstAttribute="trailing" secondItem="1PW-Ge-vRv" secondAttribute="trailing" id="zpw-TV-XrU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1PW-Ge-vRv"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="2000"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="DXF-Tm-zbS" id="LXX-Fm-4HS"/>
+                        <outlet property="tableView" destination="QhB-3O-Mqt" id="Btv-cJ-AzN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGJ-u9-lEv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223" y="188"/>
+        </scene>
+    </scenes>
+</document>

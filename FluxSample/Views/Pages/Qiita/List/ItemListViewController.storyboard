@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item List View Controller-->
+        <scene sceneID="rSF-zc-06C">
+            <objects>
+                <viewController storyboardIdentifier="ItemListViewController" id="H4h-8B-0f0" customClass="ItemListViewController" customModule="FluxSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hpd-9f-AYt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Psx-kc-85P" customClass="ItemTableView" customModule="FluxSample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="uQb-pQ-XLy">
+                                <rect key="frame" x="177" y="990" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Psx-kc-85P" secondAttribute="bottom" id="1gi-nP-q1b"/>
+                            <constraint firstItem="Psx-kc-85P" firstAttribute="top" secondItem="hpd-9f-AYt" secondAttribute="top" id="7Y4-j8-0F8"/>
+                            <constraint firstItem="uQb-pQ-XLy" firstAttribute="centerY" secondItem="hpd-9f-AYt" secondAttribute="centerY" id="M0D-PU-BcM"/>
+                            <constraint firstItem="Psx-kc-85P" firstAttribute="leading" secondItem="bzC-eq-bRu" secondAttribute="leading" id="jEj-en-vnL"/>
+                            <constraint firstItem="Psx-kc-85P" firstAttribute="trailing" secondItem="bzC-eq-bRu" secondAttribute="trailing" id="luK-zr-r7p"/>
+                            <constraint firstItem="uQb-pQ-XLy" firstAttribute="centerX" secondItem="hpd-9f-AYt" secondAttribute="centerX" id="nVi-Ta-WyZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bzC-eq-bRu"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="2000"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="uQb-pQ-XLy" id="nUj-eo-H9O"/>
+                        <outlet property="tableView" destination="Psx-kc-85P" id="Oqj-1o-7Q9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jpp-Zq-AEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223" y="188"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="143" id="1Gm-fZ-P6Z" customClass="BoxTableViewCell" customModule="FluxSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="143"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Gm-fZ-P6Z" id="i2A-me-D7a">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="142.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Peu-mv-hPQ">
+                        <rect key="frame" x="130" y="49.5" width="174" height="44"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmU-hA-w60">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="item count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyc-1T-DWW">
+                                <rect key="frame" x="0.0" y="29.5" width="60.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yen-79-Hak">
+                        <rect key="frame" x="15" y="21.5" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="yen-79-Hak" secondAttribute="height" multiplier="1:1" id="9po-Ij-VOV"/>
+                            <constraint firstAttribute="height" priority="999" constant="100" id="esT-aw-FcV"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Peu-mv-hPQ" firstAttribute="leading" secondItem="yen-79-Hak" secondAttribute="trailing" constant="15" id="RDW-Oz-1jL"/>
+                    <constraint firstAttribute="trailing" secondItem="Peu-mv-hPQ" secondAttribute="trailing" constant="15" id="avf-PJ-Zx0"/>
+                    <constraint firstItem="yen-79-Hak" firstAttribute="centerY" secondItem="i2A-me-D7a" secondAttribute="centerY" id="bUR-zw-NqH"/>
+                    <constraint firstItem="yen-79-Hak" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i2A-me-D7a" secondAttribute="top" constant="15" id="fDU-ej-yLX"/>
+                    <constraint firstItem="yen-79-Hak" firstAttribute="leading" secondItem="i2A-me-D7a" secondAttribute="leading" constant="15" id="jjd-MM-pdw"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yen-79-Hak" secondAttribute="bottom" constant="15" id="xjL-gK-FeZ"/>
+                    <constraint firstItem="Peu-mv-hPQ" firstAttribute="centerY" secondItem="i2A-me-D7a" secondAttribute="centerY" id="zAK-m2-DYT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="itemCountLabel" destination="fyc-1T-DWW" id="EiG-V9-c42"/>
+                <outlet property="nameLabel" destination="vmU-hA-w60" id="mPn-G4-ZKf"/>
+                <outlet property="thumbnailImageView" destination="yen-79-Hak" id="yMw-ho-YuG"/>
+            </connections>
+            <point key="canvasLocation" x="-10.5" y="484.5"/>
+        </tableViewCell>
+    </objects>
+</document>

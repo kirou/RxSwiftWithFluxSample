@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="dWv-dm-0w6" customClass="ImageCollectionViewCell" customModule="FluxSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="199" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="199" height="180"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTu-eJ-FWo">
+                        <rect key="frame" x="0.0" y="0.0" width="199" height="180"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="loading" translatesAutoresizingMaskIntoConstraints="NO" id="6O8-hr-VRK">
+                                <rect key="frame" x="0.0" y="0.0" width="199" height="180"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="6O8-hr-VRK" firstAttribute="leading" secondItem="hTu-eJ-FWo" secondAttribute="leading" id="4KH-uR-Yfj"/>
+                            <constraint firstAttribute="bottom" secondItem="6O8-hr-VRK" secondAttribute="bottom" id="8My-W6-chM"/>
+                            <constraint firstAttribute="trailing" secondItem="6O8-hr-VRK" secondAttribute="trailing" id="H0w-Rj-h2X"/>
+                            <constraint firstItem="6O8-hr-VRK" firstAttribute="top" secondItem="hTu-eJ-FWo" secondAttribute="top" id="NIU-jZ-zxf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="hTu-eJ-FWo" firstAttribute="top" secondItem="dWv-dm-0w6" secondAttribute="top" id="6IN-9W-fOX"/>
+                <constraint firstItem="hTu-eJ-FWo" firstAttribute="leading" secondItem="dWv-dm-0w6" secondAttribute="leading" id="Pks-G5-D3h"/>
+                <constraint firstAttribute="bottom" secondItem="hTu-eJ-FWo" secondAttribute="bottom" id="cip-Zn-sgW"/>
+                <constraint firstAttribute="trailing" secondItem="hTu-eJ-FWo" secondAttribute="trailing" id="gsr-FM-NEl"/>
+            </constraints>
+            <size key="customSize" width="478" height="290"/>
+            <connections>
+                <outlet property="thumbnailImageView" destination="6O8-hr-VRK" id="RJ4-73-gpi"/>
+            </connections>
+            <point key="canvasLocation" x="240.5" y="96"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="loading" width="50" height="50"/>
+    </resources>
+</document>

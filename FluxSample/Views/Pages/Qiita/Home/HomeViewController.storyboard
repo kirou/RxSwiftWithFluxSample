@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q2P-lh-XH9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="rsa-eZ-eQD">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="Q2P-lh-XH9" customClass="HomeViewController" customModule="FluxSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UH5-bn-X55">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROZ-4i-Cqq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="2500"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FhB-9i-y2D">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="610"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qa-yY-aHD" customClass="UserListView" customModule="FluxSample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="999" constant="300" id="ftL-z8-S2B"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btx-v9-cGG" customClass="ItemListView" customModule="FluxSample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="310" width="375" height="300"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="999" constant="300" id="Mee-3O-iFE"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FhB-9i-y2D" secondAttribute="trailing" id="5l6-Xw-PSu"/>
+                                    <constraint firstItem="FhB-9i-y2D" firstAttribute="leading" secondItem="ROZ-4i-Cqq" secondAttribute="leading" id="7ty-GT-Wfd"/>
+                                    <constraint firstAttribute="bottom" secondItem="FhB-9i-y2D" secondAttribute="bottom" id="h2S-81-SHZ"/>
+                                    <constraint firstItem="FhB-9i-y2D" firstAttribute="top" secondItem="ROZ-4i-Cqq" secondAttribute="top" id="htR-7Q-frd"/>
+                                </constraints>
+                            </scrollView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="aQ3-Io-hMM">
+                                <rect key="frame" x="177.5" y="1240" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ROZ-4i-Cqq" secondAttribute="bottom" id="2S0-x7-LuO"/>
+                            <constraint firstItem="GBh-cl-wfk" firstAttribute="trailing" secondItem="ROZ-4i-Cqq" secondAttribute="trailing" id="4zz-NV-94u"/>
+                            <constraint firstItem="ROZ-4i-Cqq" firstAttribute="leading" secondItem="GBh-cl-wfk" secondAttribute="leading" id="BiS-uy-Kmv"/>
+                            <constraint firstItem="aQ3-Io-hMM" firstAttribute="centerX" secondItem="GBh-cl-wfk" secondAttribute="centerX" id="VE1-GS-Yo1"/>
+                            <constraint firstItem="ROZ-4i-Cqq" firstAttribute="top" secondItem="UH5-bn-X55" secondAttribute="top" id="Vke-7a-oGG"/>
+                            <constraint firstItem="aQ3-Io-hMM" firstAttribute="centerY" secondItem="UH5-bn-X55" secondAttribute="centerY" id="axz-rY-viy"/>
+                            <constraint firstItem="FhB-9i-y2D" firstAttribute="width" secondItem="UH5-bn-X55" secondAttribute="width" id="sDm-0C-TPc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GBh-cl-wfk"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="2500"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="aQ3-Io-hMM" id="OqC-tK-qR5"/>
+                        <outlet property="itemListView" destination="btx-v9-cGG" id="yRN-65-CyM"/>
+                        <outlet property="itemListViewConstraint" destination="Mee-3O-iFE" id="lBx-v9-sDL"/>
+                        <outlet property="scrollView" destination="ROZ-4i-Cqq" id="K4C-fp-Eea"/>
+                        <outlet property="stackView" destination="FhB-9i-y2D" id="ttT-yJ-rJK"/>
+                        <outlet property="userListView" destination="6qa-yY-aHD" id="5By-qz-5ym"/>
+                        <outlet property="userListViewConstraint" destination="ftL-z8-S2B" id="Tve-Fq-Pqh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMm-lq-Xg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="-92.653673163418304"/>
+        </scene>
+    </scenes>
+</document>

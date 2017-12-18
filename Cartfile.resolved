@@ -1,0 +1,7 @@
+github "Alamofire/Alamofire" "4.6.0"
+github "Hearst-DD/ObjectMapper" "2.2.9"
+github "Instagram/IGListKit" "3.1.1"
+github "ReactiveX/RxSwift" "4.0.0"
+github "SwiftyJSON/SwiftyJSON" "4.0.0-alpha.1"
+github "malcommac/SwiftDate" "4.5.0"
+github "rs/SDWebImage" "4.2.2"
